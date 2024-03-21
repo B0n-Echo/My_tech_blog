@@ -60,6 +60,7 @@ const SinglePage = async () => {
             </p>
           </div>
           <div className={styles.comment}>
+            <Comments />
           </div>
         </div>
         <Menu />
