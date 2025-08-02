@@ -1,5 +1,6 @@
 import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
+import { getServerSession } from "next-auth/next";
 
 export const authOptions = {
   providers: [
@@ -13,3 +14,7 @@ export const authOptions = {
     }),
   ],
 };
+
+export function getAuthSession() {
+  return getServerSession(authOptions);
+}
